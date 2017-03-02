@@ -15,7 +15,7 @@
 	<!-- 使用 annotation -->
 	<context:annotation-config />
 	<!-- 使用 annotation 自动注册bean,并检查@Controller, @Service, @Repository注解已被注入 -->
-
+	
 	<context:component-scan base-package="com.ittx.spring002">
 		<!--除了base-package包下@Controller注解全都扫描 -->
 		<context:exclude-filter type="annotation"
@@ -55,6 +55,7 @@
 				<value>com/ittx/spring002/model/User.hbm.xml</value>
 				<value>com/ittx/spring002/model/Module.hbm.xml</value>
 				<value>com/ittx/spring002/model/Function.hbm.xml</value>
+				<value>com/ittx/spring002/model/Role.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

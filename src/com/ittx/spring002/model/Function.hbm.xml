@@ -17,5 +17,10 @@
 		<many-to-one name="module" class="com.ittx.spring002.model.Module">
 			<column name="module_id" />
 		</many-to-one>
+		
+		<set name="roleLists" table="role_function">
+			<key column="function_id"/>
+			<many-to-many class="com.ittx.spring002.model.Role" column="role_id"/>
+		</set>
 	</class>
 </hibernate-mapping>

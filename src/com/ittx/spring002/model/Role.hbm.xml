@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-3-2 11:27:18 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.ittx.spring002.model.Role" table="roles">
+        <id name="rId" type="int" access="field">
+            <column name="role_id" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" />
+        </property>
+        <property name="description" type="java.lang.String">
+            <column name="description" />
+        </property>
+        
+        <set name="functionLists" table="role_function">
+        	<key column="role_id"/>
+        	<many-to-many class="com.ittx.spring002.model.Function" column="function_id"/>
+        </set>
+    </class>
+</hibernate-mapping>

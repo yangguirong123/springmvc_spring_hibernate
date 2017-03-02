@@ -1,5 +1,7 @@
 package com.ittx.spring002.model;
 
+import java.util.Set;
+
 /**
  * 多对一的单向关连 
  * 
@@ -11,6 +13,7 @@ public class Function {
 	private String code; //user_add.do
 	private String description;
 	private Module module;
+	private Set<Role> roleLists;
 
 	public Function(String code, String description, Module module) {
 		this.code = code;
@@ -59,6 +62,14 @@ public class Function {
 
 	public void setModule(Module module) {
 		this.module = module;
+	}
+
+	public Set<Role> getRoleLists() {
+		return roleLists;
+	}
+
+	public void setRoleLists(Set<Role> roleLists) {
+		this.roleLists = roleLists;
 	}
 
 	@Override

@@ -12,4 +12,6 @@ public interface UserDao {
 	public void deleteUser(User user);
 	public User getUserById(int id);
 	public int getTotalCount();
+	
+	public List<User> getPageUtilsUserLists(int first,int max);
 }

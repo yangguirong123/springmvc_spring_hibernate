@@ -47,7 +47,6 @@ public class UserController {
 		return "list_user";
 	}
 	
-	
 	@RequestMapping("/delete")
 	public String deleteUser(Integer id){
 		User user = userServer.getUserById(id);

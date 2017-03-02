@@ -15,7 +15,7 @@
             <column name="description" />
         </property>
         
-        <set name="functionLists" table="role_function">
+        <set name="functionLists" table="role_function" lazy="false">
         	<key column="role_id"/>
         	<many-to-many class="com.ittx.spring002.model.Function" column="function_id"/>
         </set>

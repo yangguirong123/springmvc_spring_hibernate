@@ -18,7 +18,7 @@
 			<column name="module_id" />
 		</many-to-one>
 		
-		<set name="roleLists" table="role_function">
+		<set name="roleLists" table="role_function" lazy="false">
 			<key column="function_id"/>
 			<many-to-many class="com.ittx.spring002.model.Role" column="role_id"/>
 		</set>

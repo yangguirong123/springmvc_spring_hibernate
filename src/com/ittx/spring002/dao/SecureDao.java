@@ -14,11 +14,12 @@ public interface SecureDao {
 	
 	//==========function===============
 	void addFunction(Function function);
-	List<Function> getFunction();
+	List<Function> getAllFunction();
+	List<Function> getFunction(int moduleId);
 	
 	//===========role===============
 	void addRole(Role role);
-	List<Role> getRoles();
+	List<Role> getAllRoles();
 	Role getRoleById(int id);
 	void updateRole(Role role);
 }

@@ -1,5 +1,6 @@
 package com.ittx.spring002.model;
 
+import java.util.List;
 import java.util.Set;
 
 /**

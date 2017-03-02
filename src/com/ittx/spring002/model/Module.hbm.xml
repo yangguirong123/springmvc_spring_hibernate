@@ -20,5 +20,6 @@
             </key>
             <one-to-many class="com.ittx.spring002.model.Function" />
         </set>
+       
     </class>
 </hibernate-mapping>

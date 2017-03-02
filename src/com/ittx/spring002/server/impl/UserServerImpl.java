@@ -30,7 +30,6 @@ public class UserServerImpl implements UserServer {
 	 * @Transactional(propagation = Propagation.NOT_SUPPORTED)
 	 * 该方法不开事务
 	 */
-	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	@Override
 	public void addUser(User user) {
 		userDao.addUser(user);

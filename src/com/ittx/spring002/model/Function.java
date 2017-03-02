@@ -1,5 +1,6 @@
 package com.ittx.spring002.model;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -74,7 +75,7 @@ public class Function {
 
 	@Override
 	public String toString() {
-		return "Function [fId=" + fId + ", code=" + code + ", description=" + description + ", module=" + module + "]";
+		return "Function [fId=" + fId + ", code=" + code + ", description=" + description + ", module="  + "]";
 	}
 
 }

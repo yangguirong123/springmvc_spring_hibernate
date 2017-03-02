@@ -16,15 +16,16 @@
 	<context:annotation-config />
 	<!-- 使用 annotation 自动注册bean,并检查@Controller, @Service, @Repository注解已被注入 -->
 
-	 <context:component-scan base-package="com.ittx.spring002">
+	<context:component-scan base-package="com.ittx.spring002">
 		<!--除了base-package包下@Controller注解全都扫描 -->
-		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 
 	<!-- 数据库连接池 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<!-- 数据库连接属性必填 -->
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/scxh" />
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/car_manager" />
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
 		<property name="user" value="root" />
 		<property name="password" value="a123" />
@@ -52,6 +53,8 @@
 		<property name="mappingResources">
 			<list>
 				<value>com/ittx/spring002/model/User.hbm.xml</value>
+				<value>com/ittx/spring002/model/Module.hbm.xml</value>
+				<value>com/ittx/spring002/model/Function.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
